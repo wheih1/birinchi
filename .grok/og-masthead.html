@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Sahar Serif";
+      src: url("./fonts/LiberationSerif-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Sahar Serif";
+      src: url("./fonts/LiberationSerif-Italic.ttf") format("truetype");
+      font-weight: 400;
+      font-style: italic;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #f3efe6;
+    }
+    .sheet {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background: #f3efe6 url("./paper.png") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .plate {
+      position: absolute;
+      inset: 36px 48px;
+      border: 1px solid rgba(28, 27, 24, 0.14);
+      pointer-events: none;
+    }
+    .plate::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(62, 74, 86, 0.18);
+    }
+    .lockup {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      width: 760px;
+    }
+    .name {
+      font-family: "Sahar Serif", "Liberation Serif", Georgia, serif;
+      font-weight: 700;
+      font-size: 132px;
+      letter-spacing: 0.42em;
+      color: #1c1b18;
+      margin: 0;
+      line-height: 0.92;
+      padding-left: 0.42em;
+      font-kerning: none;
+      text-rendering: optimizeLegibility;
+    }
+    .rule {
+      width: 560px;
+      height: 1px;
+      background: #3e4a56;
+      margin: 28px auto 22px;
+    }
+    .tagline {
+      font-family: "Sahar Serif", "Liberation Serif", Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 0.14em;
+      color: #1c1b18;
+      margin: 0;
+      padding-left: 0.14em;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="plate"></div>
+    <div class="lockup">
+      <h1 class="name">SAHAR</h1>
+      <div class="rule"></div>
+      <p class="tagline">Kunning birinchi sahifasi</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: var(--sahar-paper);
+  --color-ink: var(--sahar-ink);
+  --color-muted: var(--sahar-muted);
+  --color-subtle: var(--sahar-subtle);
+  --color-surface: var(--sahar-surface);
+  --color-raised: var(--sahar-raised);
+  --color-rule: var(--sahar-rule);
+  --color-accent: var(--sahar-accent);
+  --color-accent-fg: var(--sahar-accent-fg);
+  --color-live: var(--sahar-live);
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+}
+
+:root {
+  --sahar-paper: #f3efe6;
+  --sahar-ink: #1c1b18;
+  --sahar-muted: #5e5a52;
+  --sahar-subtle: #8a8578;
+  --sahar-surface: #e7e1d3;
+  --sahar-raised: #faf7f0;
+  --sahar-rule: #d0c9b8;
+  --sahar-accent: #3e4a56;
+  --sahar-accent-fg: #f3efe6;
+  --sahar-live: #8f3d34;
+  --shadow-border:
+    0 0 0 1px color-mix(in oklab, var(--sahar-ink) 8%, transparent),
+    0 1px 2px -1px color-mix(in oklab, var(--sahar-ink) 8%, transparent),
+    0 8px 24px -16px color-mix(in oklab, var(--sahar-ink) 18%, transparent);
+}
+
+[data-theme="night"] {
+  --sahar-paper: #12110f;
+  --sahar-ink: #ece8df;
+  --sahar-muted: #b7b1a4;
+  --sahar-subtle: #8d877b;
+  --sahar-surface: #1c1b18;
+  --sahar-raised: #23211d;
+  --sahar-rule: #2e2c27;
+  --sahar-accent: #c5ccd4;
+  --sahar-accent-fg: #12110f;
+  --sahar-live: #d27a70;
+  --shadow-border: 0 0 0 1px color-mix(in oklab, var(--sahar-ink) 10%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--sahar-paper);
+    color: var(--sahar-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(color-mix(in oklab, var(--sahar-ink) 4.5%, transparent) 0.6px, transparent 0.7px);
+    background-size: 3px 3px;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--sahar-accent) 22%, var(--sahar-paper));
+    color: var(--sahar-ink);
+  }
+}
+
+.masthead-word {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  line-height: 0.9;
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.4em;
+  line-height: 0.78;
+  padding-right: 0.08em;
+  padding-top: 0.08em;
+  font-weight: 500;
+}
+
+.reader-sm { font-size: 1.05rem; line-height: 1.65; }
+.reader-md { font-size: 1.2rem; line-height: 1.7; }
+.reader-lg { font-size: 1.38rem; line-height: 1.75; }
+
+.hairline {
+  height: 1px;
+  background: var(--sahar-rule);
+}
+
+.double-rule {
+  border-top: 3px solid var(--sahar-ink);
+  border-bottom: 1px solid var(--sahar-ink);
+  height: 6px;
+}
+
+.progress-bar {
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

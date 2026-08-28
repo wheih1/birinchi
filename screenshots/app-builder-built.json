@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SAHAR",
+      "hasCanvas": false,
+      "bodyTextLen": 4782,
+      "bodyTextHash": "bebe772658ea73f5319bfd100d8572d7a691aec241e847947151a173381d7ee6",
+      "bodyTextPrefix": "Mazmunga o‘tish payshanba, 27-avgust, 2026 № 239 · 22:19 SAHAR K",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SAHAR",
+      "hasCanvas": false,
+      "bodyTextLen": 4638,
+      "bodyTextHash": "8039b7b7da8777dc8014a7a3a45793d85adc72e79d30f2b50cf779e35db42377",
+      "bodyTextPrefix": "Mazmunga o‘tish payshanba, 27-avgust, 2026 № 239 · 22:19 SAHAR K",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
